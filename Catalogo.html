@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD (HTML,CSS Y JavaScript)</title>
+    <link href="css/estilos.css" rel="stylesheet">
+    <script type="text/JavaScript" src="js/crud.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <h1>Productos</h1>
+        <div id="contenido">
+            
+            <form>
+                <label>PRODUCTO</label><br>
+                <input type="text" class="input-value" id="producto"><br>
+                <label>Valor</label><br>
+                <input type="number" class="input-value" id="valor"><br>
+            </form>
+            <button type="button" id="agregar" onclick="agregar()">Agregar Producto</button>
+            <button type="button" id="listar" onclick="cargarDatos()" >Actualizar Productos</button>
+            <button type="button" id="limpiar" onclick="borrarTabla()">Borrar Registros</button>
+            <br>
+            <P>Lista de Productos</p>
+            <table id="listaProductos">
+                <thead>
+                    <tr><th>Id</th>
+                        <th>Producto</th>
+                        <th>Valor</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="filas">
+
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+    <!-- Script to remove HTML element 
+    <script>
+        var div = document.getElementById('listaProductos');
+          
+        function agregar() {
+            div.remove();
+        }
+    </script> 
+    -->
+</body>
+</html>
